@@ -415,17 +415,17 @@ align-items: center; /*  VERTICAL */
       /* rotateY(120deg)  */
       /* rotateZ(90deg); */
       /* Ahora seguimos con transiciones */
-  transition: width 2s, height 2s, background 2s, transform ease-in-out 5s;
+  /* transition: width 2s, height 2s, background 2s, transform ease-in-out 5s;
   transition-timing-function: ease-in-out;
-  transition-delay: 1s;
+  transition-delay: 1s; */
 }
 
-#trans:hover {
+/* #trans:hover {
   width: 300px;
   height: 300px;
   background-color: yellow;
   transform: rotateY(180deg);
-}
+} */
 
 
 /* -------------- POP UPS-------- */
