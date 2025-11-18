@@ -1,7 +1,7 @@
 // -----------------------------
 // Pop-up tradicional con JS
-// Forma clásica usando getElementsByClassName y getElementById
-// Asignación de eventos con onclick
+// Forma clásica usando "getElementsByClassName" y "getElementById"
+// Asignación de eventos con "onclick"
 // -----------------------------
 
 // -----------------------------
@@ -9,7 +9,7 @@
 // -----------------------------
 // El DOM es el puente entre HTML y JavaScript. Permite que tu JS “vea” y “modifique” 
 // la página web como si fuera un conjunto de objetos que puedes manipular dinámicamente.
-// getElementsByClassName devuelve una colección (array-like) de todos los elementos que tienen esa clase
+// para este ejemplo usamos getElementsByClassName devuelve una colección (array-like) de todos los elementos que tienen esa clase
 // getElementById devuelve un único elemento que tenga ese id
 let ventana = document.getElementsByClassName("ventana-emergente"); // Selecciona el/los div(s) del pop-up
 let botonAbrirVentana = document.getElementById("boton-abrir");      // Selecciona el botón de abrir
@@ -36,7 +36,7 @@ botonAbrirVentana.onclick = function () {
 
 // Cerrar el pop-up
 botonCerrarVentana.onclick = function () {
-  console.log("se cerró el pop up"); // útil para depuración
+  // console.log("se cerró el pop up"); // útil para depuración
   // Cambiamos display a "none" para ocultar la ventana
   ventana[0].style.display = "none"; 
 };
@@ -49,7 +49,7 @@ botonCerrarVentana.onclick = function () {
 
 
 // // Pop-up moderno con JS
-// // Segunda alternativa de sintaxis moderna con querySelector y addEventListener
+// // Segunda alternativa de sintaxis moderna con "querySelector" y "addEventListener"
 // // -----------------------------
 
 // // -----------------------------
@@ -59,10 +59,11 @@ botonCerrarVentana.onclick = function () {
 // // la página web como si fuera un conjunto de objetos que puedes manipular dinámicamente.
 // // querySelector selecciona elementos del HTML usando selectores CSS.
 // // Nos permite “apuntar” a etiquetas, clases o ids desde JavaScript.
-// // Usamos const porque la referencia al elemento no va a cambiar, aunque sí podemos modificar sus propiedades (como style.display).
+// // Para este ejemplo usamos const porque la referencia al elemento no va a cambiar, aunque sí podemos modificar sus propiedades (como style.display).
+
 // const ventana = document.querySelector(".ventana-emergente"); // Selecciona el div del pop-up
-// const botonAbrir = document.querySelector("#boton-abrir");     // Selecciona el botón de abrir
-// const botonCerrar = document.querySelector("#boton-cerrar");   // Selecciona el botón de cerrar
+// const botonAbrirVentana = document.querySelector("#boton-abrir");     // Selecciona el botón de abrir
+// const botonCerrarVentana = document.querySelector("#boton-cerrar");   // Selecciona el botón de cerrar
 
 // // -----------------------------
 // // Funciones para abrir y cerrar el pop-up
@@ -90,28 +91,32 @@ botonCerrarVentana.onclick = function () {
 // // Esto permite separar HTML (estructura) de JS (comportamiento)
 
 // // Escuchamos el evento click para abrir el pop-up
-// botonAbrir.addEventListener("click", abrirPopup); 
+// botonAbrirVentana.addEventListener("click", abrirPopup); 
 // // Aquí no usamos onclick en HTML, mantenemos el HTML limpio
 
 // // Escuchamos el evento click para cerrar el pop-up
-// botonCerrar.addEventListener("click", cerrarPopup);
+// botonCerrarVentana.addEventListener("click", cerrarPopup);
 
-// // -----------------------------
-// // Funcionalidad extra: cerrar el pop-up al hacer click fuera de él
-// // -----------------------------
-// // Escuchamos clicks en todo el documento
-// // event.target nos dice sobre qué elemento se hizo click
-// // ventana.contains(event.target) verifica si el click fue dentro del pop-up
-// // event.target !== botonAbrir evita que se cierre al hacer click en el botón de abrir
-// document.addEventListener("click", function(event) {
-//   if (
-//     ventana.style.display === "block" &&
-//     !ventana.contains(event.target) &&
-//     event.target !== botonAbrir
-//   ) {
-//     cerrarPopup(); // Cerramos la ventana si el click fue fuera
-//   }
-// });
+
+
+
+
+// -----------------------------
+// Funcionalidad extra: cerrar el pop-up al hacer click fuera de él
+// -----------------------------
+// Escuchamos clicks en todo el documento
+// event.target nos dice sobre qué elemento se hizo click
+// ventana.contains(event.target) verifica si el click fue dentro del pop-up
+// event.target !== botonAbrir evita que se cierre al hacer click en el botón de abrir
+document.addEventListener("click", function(event) {
+  if (
+    ventana.style.display === "block" &&
+    !ventana.contains(event.target) &&
+    event.target !== botonAbrir
+  ) {
+    cerrarPopup(); // Cerramos la ventana si el click fue fuera
+  }
+});
 
 
 
