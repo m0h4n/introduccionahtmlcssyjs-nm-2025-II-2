@@ -16,7 +16,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="style.css" />
     <script src="zonaclickeablepopup.js" defer></script>
   </head>
   <body>
@@ -58,19 +58,16 @@ The first two values are the (x, y) coordinates of the first corner. The third a
             coords="600, 350, 1000, 510"
             alt="Pantalla"
             href="#"
-            onclick="abrirPopUpZonaClickeable(); return false;"
+            onclick="abrirPopUpZonaClickeable();"
           />
         </map>
       </div>
-     
-    </div>
-     <!--       pop up desde zonas clickeables -->
+      <!--       pop up desde zonas clickeables -->
       <div class="ventana-emergente">
-        <img
-          src="assets/images/Bowie_image.jpg"
-        />
+        <img src="assets/images/Bowie_image.jpg" />
 
         <button id="boton-cerrar">&times;</button>
       </div>
+    </div>
   </body>
 </html>
