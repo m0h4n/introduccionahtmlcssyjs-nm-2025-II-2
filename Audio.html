@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <title>Audio</title>
+    <meta
+      name="description"
+      content="our first web-based interactive multimedia narrative"
+    />
+    <link
+      id="favicon"
+      rel="icon"
+      href=".
+assets/images/David_Bowie_logo_(Diamond_Dogs).svg.png"
+      type="image/x-icon"
+    />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link
+      rel="stylesheet"
+      href="
+style.css"
+    />
+    <script src="audio.js" defer></script>
+  </head>
+
+  <body>
+    <!--   onload = "playSound2()" -->
+
+    <!--       <body onmousemove="reproducirSonido()"> -->
+    <header>
+      <ul>
+        <li><a href="index.html">↖ volver</a></li>
+      </ul>
+    </header>
+
+    <div class="infogeneral">
+      <h1>Sonido/Audio &lt;audio&gt;</h1>
+    </div>
+
+    <button onclick="playSound()">
+      <img
+        src="assets/images/David_Bowie_logo_(Diamond_Dogs).svg.png"
+        class="icon"
+        width="50"
+      />
+      <!--           Escuchar"Afraid of Americans" -->
+    </button>
+    <!-- puedes usar onmouseover -->
+
+    <audio id="audio">
+      <source src="assets/audio/I'm Afraid Of Americans.mp3" type="audio/mp3" />
+    </audio>
+
+    <!-- Para segundo ejemplo de Botón - Play/Pause. Usarlo con JS -->
+
+    <button id="playPauseBtn">Reproducir</button>
+
+    <audio id="audio2">
+      <source src="assets/audio/I'm Afraid Of Americans.mp3" type="audio/mp3" />
+    </audio>
+
+    <!-- Ejemplo de autoplay, simplemente poner autoplay="autoplay" y controls="controls", etc. -->
+    <!-- <audio autoplay="autoplay" controls="controls"> -->
+    <!-- incluso puede poner solamente una palabra sin comillas. Otro posible atributo es loop -->
+    <!-- <source src="assets/audio/I'm Afraid Of Americans.mp3" type="audio/mp3" /> -->
+    <!-- </audio> -->
+  </body>
+</html>

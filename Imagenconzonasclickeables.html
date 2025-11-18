@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Imagen con zonas clickeables</title>
+    <meta
+      name="description"
+      content="our first web-based interactive multimedia narrative"
+    />
+    <link
+      id="favicon"
+      rel="icon"
+      href="assets/images/David_Bowie_logo_(Diamond_Dogs).svg.png"
+      type="image/x-icon"
+    />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="/style.css" />
+    <script src="zonaclickeablepopup.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <ul>
+        <li><a href="index.html">↖ volver</a></li>
+      </ul>
+    </header>
+
+    <div>
+      <h1>Imagen &lt;img/&gt;</h1>
+
+      <div>
+        <img
+          src="assets/images/cabina-nave-espacial-futurista-zona-clickeable.jpg"
+          alt="Cabina"
+          usemap="#workmap"
+          width="1536"
+          height="864"
+        />
+
+        <!--         la imagen <img> trabaja aquí con la etiqueta <map> que a su vez contiene una etiqueta <area>  -->
+
+        <!-- <map name="workmap">
+          <area
+            shape="rect"
+            coords="600, 350, 1000, 510"
+            alt="Pantalla"
+            href="Videosyoutube.html"
+          /> -->
+        <!--   If the shape attribute is set to rect, the coordinates define the top-left and bottom-right of the rectangle. There should be four numeric values, separated by commas. 
+The first two values are the (x, y) coordinates of the first corner. The third and fourth numbers are the (x, y) coordinates of the second corner. -->
+
+        <!-- opción 2 para abrir un pop up desde la zona clickeable: -->
+
+        <map name="workmap">
+          <area
+            shape="rect"
+            coords="600, 350, 1000, 510"
+            alt="Pantalla"
+            href="#"
+            onclick="abrirPopUpZonaClickeable(); return false;"
+          />
+        </map>
+      </div>
+      <!--       pop up desde zonas clickeables -->
+      <div class="ventana-emergente">
+        <img
+          src="https://cdn.glitch.global/080d9786-9b36-4efb-a075-24be6b0573c9/MV5BNWQ4Yzg4N2ItZWVjMi00MWYzLWJmZmEtNzRlOGJiYzJlNGI1XkEyXkFqcGdeQXVyNjc5NjEzNA%40%40._V1_.jpg?v=1694657321611"
+        />
+
+        <button id="boton-cerrar">&times;</button>
+      </div>
+    </div>
+  </body>
+</html>

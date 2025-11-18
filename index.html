@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Home</title>
+    <meta
+      name="description"
+      content="our first web-based interactive multimedia narrative"
+    />
+    <!-- por si uno quiere cambiar el ícono dinámicamente luego con CSS o JS, ponemos el id, así: -->
+    <link
+      id="favicon"
+      rel="icon"
+      href="assets/images/David_Bowie_logo_(Diamond_Dogs).svg.png"
+      type="image/x-icon"
+    />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- para hacerlo responsive en celulares: -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <script src="dibujovectorial.js" defer></script>
+  </head>
+
+  <body>
+    <header>
+      <ul>
+        <li><a href="Parrafos.html">Párrafos</a></li>
+        <li><a href="Imagenes.html">Imágenes</a></li>
+        <li><a href="Imagencomofondo.html">Imagen como Fondo</a></li>
+        <li><a href="Links.html">Links</a></li>
+        <li>
+          <a href="Infografías, storymaps, carruseles.html"
+            >Infografías, storymaps, carruseles
+          </a>
+        </li>
+        <li><a href="Videosyoutube.html">Videos (YouTube)</a></li>
+        <li><a href="Video.html">Video</a></li>
+        <li><a href="Botones.html">Botones</a></li>
+        <li><a href="Popups.html"> Pop Ups</a></li>
+        <li><a href="Pantalladividida.html">Pantalla Dividida</a></li>
+        <li>
+          <a href="Imagenconzonasclickeables.html"
+            >Imagen con Zonas Clickeables</a
+          >
+        </li>
+        <li><a href="Audio.html">Audio</a></li>
+        <li>
+          <a href="Transformaciones y transiciones.html">
+            Transformaciones y transiciones
+          </a>
+        </li>
+      </ul>
+    </header>
+
+    <!--         Ejemplo para abrir link en ventana externa.  -->
+    <h1 id="infobowie">
+      <b>
+        Esta introducción a HTML, CSS y JS como pequeño homenaje al cantante
+        alienígena de
+        <a
+          href="https://4l3ph.com/2023/01/08/david-bowie-el-hombre-alien-que-podia-escuchar-el-futuro-desde-las-estrellas/"
+          target="_blank"
+        >
+          David Bowie
+        </a>
+        <!--        El atributo target="_blank" abre el enlace en una pestaña nueva-->
+      </b>
+    </h1>
+
+    <!--     Ejemplo de canvas para dibujos vectoriales, animaciones generativas en JS, etc.-->
+
+    <canvas id="myCanvas" width="1481" height="794"> </canvas>
+
+    <!--     Embedding Hydra, ejemplo creativo para entorno de código creativo -->
+    <!-- <iframe
+      src="https://hydra.ojack.xyz/?sketch_id=example_4"
+      name="myIFrame"
+      width="100%"
+      height="400px"
+      style="border: solid #000000"
+    ></iframe> -->
+
+    <!--     Shortcut para abrir la consola -->
+    <!-- console.log("hicimos clic en el botón");  -->
+    <!-- ctrl + shift + i (saca la consola) -->
+  </body>
+</html>
