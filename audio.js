@@ -1,4 +1,5 @@
 
+// Para forzar el autoplay, apenas se cargue la página. Con onload en el <body> del HTML
 // Para controlar reproducción de audio a través de un botón. Otra forma de escuchar eventos.
 
 // function playSound() {
@@ -15,6 +16,7 @@
 // }
 
 
+// Otros ejemplos de control de audio con botones
 
 // Para primer ejemplo de Botón también con opción de Play/Pause
 
@@ -66,24 +68,3 @@ document.getElementById("playPauseBtn").addEventListener("click", function () {
 
 
 
-// código para forzar que primero cargue el contenido el HTML y luego sí la función en JS. Esto se puede evitar poniendo defer en la etiqueta script en HTML.
-//   document.addEventListener('DOMContentLoaded', function() {
-//     var audio2 = document.getElementById('audio2');
-//     var playPauseBtn = document.getElementById('playPauseBtn');
-
-//     playPauseBtn.addEventListener('click', function() {
-//       if (audio2.paused) {
-//         audio2.play();
-//         playPauseBtn.textContent = 'Pausar';
-//       } else {
-//         audio2.pause();
-//         playPauseBtn.textContent = 'Reproducir';
-//       }
-//     });
-//   });
-
-// Para forzar el autoplay, apenas se cargue la página. Con onload en el <body> del HTML
-// function playSound() {
-//   var audio = document.getElementById("audio");
-//   audio.play(); // pause()
-// }
