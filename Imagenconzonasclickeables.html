@@ -18,6 +18,14 @@
 
     <link rel="stylesheet" href="style.css" />
     <script src="zonaclickeablepopup.js" defer></script>
+    <script>
+      // Detectar movimiento del mouse en toda la ventana
+      window.addEventListener("mousemove", function (event) {
+        const x = event.clientX; // Posición X dentro de la ventana
+        const y = event.clientY; // Posición Y dentro de la ventana
+        console.log("X:", x, "Y:", y);
+      });
+    </script>
   </head>
   <body>
     <header>
@@ -69,13 +77,5 @@ The first two values are the (x, y) coordinates of the first corner. The third a
         <button id="boton-cerrar">&times;</button>
       </div>
     </div>
-    <script>
-      // Detectar movimiento del mouse en toda la ventana
-      window.addEventListener("mousemove", function (event) {
-        const x = event.clientX; // Posición X dentro de la ventana
-        const y = event.clientY; // Posición Y dentro de la ventana
-        console.log("X:", x, "Y:", y);
-      });
-    </script>
   </body>
 </html>
